@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Selling & List Item | Ka Trade Marketplace</title>
+    <!-- Tailwind CSS & FontAwesome -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-emerald-600 text-white p-2 rounded-xl font-bold text-xl tracking-wider w-10 h-10 flex items-center justify-center shadow-md shadow-emerald-200">K</div>
+                <span class="text-2xl font-bold tracking-tight text-slate-900">Ka<span class="text-emerald-600">.</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                <a href="index.html" class="hover:text-slate-900 transition">Home</a>
+                <a href="explore.html" class="hover:text-slate-900 transition">Explore Trade</a>
+                <a href="matching.html" class="hover:text-slate-900 transition">AI Matching</a>
+                <a href="#" class="text-emerald-600 font-semibold">Start Selling</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="bg-slate-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-800 transition shadow-xs">
+                    My Account
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title & Security Banner -->
+    <section class="bg-gradient-to-b from-emerald-50/60 via-white to-slate-50 pt-10 pb-8 border-b border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                <i class="fa-solid fa-shield-halved mr-1.5 text-emerald-600"></i> Verified Seller Onboarding & Anti-Fraud Protection
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                List Your Item for Trade or Sale
+            </h1>
+            <p class="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto">
+                All listings undergo real-time AI image & description cross-verification. Ensure all product specs and KYC identity information are authentic.
+            </p>
+        </div>
+    </section>
+
+    <!-- Listing Form Container -->
+    <main class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <form id="listingForm" onsubmit="handleFormSubmit(event)" class="space-y-8">
+
+                <!-- SECTION 1: Seller Verification (KYC) -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-xs space-y-6">
+                    <div class="flex items-center space-x-3 pb-4 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base">
+                            1
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Trader Identity Verification (KYC)</h2>
+                            <p class="text-xs text-slate-500">Government ID and personal details are strictly required to operate on KA Trade.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Legal Name *</label>
+                            <input type="text" id="sellerName" required placeholder="e.g. Kiprotich Samuel" class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Age (Must be 18+) *</label>
+                            <input type="number" id="sellerAge" min="18" max="120" required placeholder="e.g. 28" class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number & WhatsApp *</label>
+                            <input type="tel" id="sellerContact" required placeholder="e.g. +256 770 000 000" class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Government ID Type & Number *</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <select id="idType" class="col-span-1 text-xs font-bold px-2 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none cursor-pointer">
+                                    <option value="National ID">National ID</option>
+                                    <option value="Passport">Passport</option>
+                                    <option value="Driver License">Driver's License</option>
+                                </select>
+                                <input type="text" id="idNumber" required placeholder="ID Number..." class="col-span-2 text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: Item Information -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-xs space-y-6">
+                    <div class="flex items-center space-x-3 pb-4 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-base">
+                            2
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Item Specifications & Valuation</h2>
+                            <p class="text-xs text-slate-500">Provide accurate condition metrics and current stock availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Item Title / Commodity Name *</label>
+                            <input type="text" id="itemTitle" required placeholder="e.g. Commercial Stainless Steel Deep Fryer (20L Capacity)" class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Trade Sector *</label>
+                            <select id="itemSector" required class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none cursor-pointer">
+                                <option value="">Select Sector...</option>
+                                <option value="Agriculture">Agriculture & Agri-Products</option>
+                                <option value="Cooking">Cooking & Commercial Kitchen</option>
+                                <option value="Electronics">Electronics & Smart Tech</option>
+                                <option value="Renewable Energy">Renewable Energy</option>
+                                <option value="Textiles">Textiles & Apparel</option>
+                                <option value="Construction">Construction & Metals</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Item Condition *</label>
+                            <select id="itemCondition" required class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none cursor-pointer">
+                                <option value="Brand New">Brand New (Factory Sealed)</option>
+                                <option value="Refurbished">Refurbished / Serviced</option>
+                                <option value="Used - Like New">Used — Like New</option>
+                                <option value="Used - Good">Used — Good Working Order</option>
+                                <option value="Raw Commodity">Raw Harvest / Bulk Commodity</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Estimated Market Value (USD $) *</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-3.5 text-slate-400 font-bold text-sm">$</span>
+                                <input type="number" id="itemValue" required min="1" step="any" placeholder="0.00" class="w-full text-sm pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition">
+                            </div>
+                            <p class="text-[11px] text-slate-400 mt-1">Provide a fair, non-inflated valuation to avoid legal flags.</p>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Number in Stock / Quantity Available *</label>
+                            <input type="number" id="itemQuantity" required min="1" value="1" class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition">
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Accurate Product Description *</label>
+                            <textarea id="itemDescription" required rows="4" placeholder="Detail specifications, voltage, measurements, defects (if any), serial numbers, or certification standard..." class="w-full text-sm px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:outline-none transition"></textarea>
+                            <p class="text-[11px] text-slate-500 mt-1">Note: KA AI will cross-verify this description with your uploaded image visual features.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: AI Image Upload & Authenticator -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-xs space-y-6">
+                    <div class="flex items-center space-x-3 pb-4 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base">
+                            3
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Product Image & AI Evaluation</h2>
+                            <p class="text-xs text-slate-500">Upload authentic photos. Fake, stock, or deceptive photos will fail AI inspection.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="border-2 border-dashed border-slate-200 rounded-2xl p-6 text-center hover:bg-slate-50 transition cursor-pointer relative" id="dropZone">
+                            <i class="fa-solid fa-cloud-arrow-up text-4xl text-slate-300 mb-2"></i>
+                            <p class="text-xs font-bold text-slate-700">Click to upload product image or drag and drop</p>
+                            <p class="text-[11px] text-slate-400 mt-1">PNG, JPG, or WEBP up to 10MB</p>
+                            <input type="file" id="imageInput" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer" onchange="previewAndEvaluateImage(event)">
+                        </div>
+
+                        <!-- Image Preview & AI Inspection Results Container -->
+                        <div id="aiEvaluationContainer" class="hidden bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-4">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <img id="imagePreview" src="#" alt="Uploaded Preview" class="w-24 h-24 object-cover rounded-xl border border-slate-200 shrink-0">
+                                <div class="flex-1 space-y-2 text-xs">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-bold text-slate-800 uppercase tracking-wider flex items-center">
+                                            <i class="fa-solid fa-wand-magic-sparkles text-emerald-600 mr-1.5"></i> KA AI Visual Inspection Analysis
+                                        </span>
+                                        <span id="aiBadge" class="px-2.5 py-0.5 rounded-full font-bold text-[10px]">Processing...</span>
+                                    </div>
+                                    <p id="aiReportText" class="text-slate-600 font-medium">Scanning visual traits, metadata, and cross-checking against provided description...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4: Mandatory Legal Anti-Scam Terms & Penalties Agreement -->
+                <div class="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center space-x-3 text-amber-900">
+                        <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center font-bold text-base shrink-0">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold">Mandatory Legal Terms & Fraud Prevention Disclosures</h2>
+                            <p class="text-xs text-amber-800">Please read carefully before submitting your listing.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/80 rounded-xl p-4 border border-amber-200/60 text-xs text-slate-700 space-y-3 leading-relaxed">
+                        <p class="font-semibold text-slate-900">By listing an item on KA Trade, you agree to the following strict marketplace conditions:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>
+                                <strong>Description & Image Accuracy:</strong> If your item is found to be invalid, counterfeit, misrepresented, or substantially different from the images provided, you will be immediately subject to internal KA disciplinary proceedings and <span class="text-red-600 font-bold">held legally answerable to KA personnel and the Court of Law</span>.
+                            </li>
+                            <li>
+                                <strong>Anti-Scam & Price Gouging Clause:</strong> Any intentional overpricing with the intent to deceive, fraudulent listings, or attempts to scam buyers will lead to immediate asset freezing, permanent KYC ban, and <span class="text-red-600 font-bold">direct prosecution in a Court of Law</span>.
+                            </li>
+                            <li>
+                                <strong>Identity Accountability:</strong> Your uploaded Name, Age, Phone Number, and Government ID will be retained and submitted to law enforcement agencies in the event of trade dispute investigations or fraudulent activity.
+                            </li>
+                            <li>
+                                <strong>Ownership Declaration:</strong> You legally affirm that you are the rightful owner or authorized distributor of this commodity and possess full rights to offer it for barter or cash sale.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Mandatory Agreement Checkbox -->
+                    <div class="flex items-start space-x-3 pt-2">
+                        <input type="checkbox" id="termsAgree" required class="mt-1 w-4 h-4 text-emerald-600 border-slate-300 rounded focus:ring-emerald-500 cursor-pointer">
+                        <label for="termsAgree" class="text-xs font-bold text-slate-900 cursor-pointer leading-snug">
+                            I solemnly affirm that all item details, prices, and uploaded identity documents are 100% accurate. I accept full legal liability and acknowledge that any attempt to scam will result in legal action in court and KA platform penalties. *
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Action Bar -->
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
+                    <a href="index.html" class="text-xs font-bold text-slate-500 hover:text-slate-800 transition">
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Cancel and Return Home
+                    </a>
+                    <button type="submit" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-8 py-4 rounded-xl transition shadow-lg shadow-emerald-200/80 flex items-center justify-center space-x-2 cursor-pointer">
+                        <i class="fa-solid fa-shield-check"></i>
+                        <span>Authenticate & Publish Listing</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Ka.trade • Powered by Ka AI Safety Protocol</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition">Legal Terms</a>
+                <a href="#" class="hover:text-white transition">KYC Policy</a>
+                <a href="#" class="hover:text-white transition">Escrow Protection</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // AI Image Inspection Simulator
+        function previewAndEvaluateImage(event) {
+            const input = event.target;
+            const container = document.getElementById('aiEvaluationContainer');
+            const preview = document.getElementById('imagePreview');
+            const badge = document.getElementById('aiBadge');
+            const report = document.getElementById('aiReportText');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    container.classList.remove('hidden');
+
+                    // Simulate AI Analysis Progress
+                    badge.className = "px-2.5 py-0.5 rounded-full font-bold text-[10px] bg-amber-100 text-amber-800";
+                    badge.textContent = "AI Inspecting Visual Traits...";
+                    report.textContent = "Checking image metadata, reverse lookup, and texture consistency against product specs...";
+
+                    setTimeout(() => {
+                        const description = document.getElementById('itemDescription').value.trim();
+                        
+                        badge.className = "px-2.5 py-0.5 rounded-full font-bold text-[10px] bg-emerald-100 text-emerald-800";
+                        badge.textContent = "PASSED — AI VERIFIED IMAGE";
+                        report.innerHTML = `<span class="text-emerald-700 font-bold"><i class="fa-solid fa-check-circle mr-1"></i> Visual Match Confirmed:</span> No stock-photo artifacts detected. Image characteristics match item category and condition.`;
+                    }, 1800);
+                }
+                
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Form Submission & Compliance Verification
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('sellerName').value;
+            const age = parseInt(document.getElementById('sellerAge').value);
+            const agreed = document.getElementById('termsAgree').checked;
+
+            if (age < 18) {
+                alert("You must be at least 18 years old to trade on KA Trade.");
+                return;
+            }
+
+            if (!agreed) {
+                alert("You must agree to the legal terms and legal court liability clauses to publish a listing.");
+                return;
+            }
+
+            alert(`Listing successfully submitted, ${name}! Your item has passed initial KA AI security screening and is live for matching and escrow barter.`);
+            window.location.href = "matching.html";
+        }
+    </script>
+</body>
+</html>

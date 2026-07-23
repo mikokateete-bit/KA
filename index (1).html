@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ka – Modern Trade & Smart B2B Marketplace</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="bg-emerald-600 text-white p-2 rounded-xl font-bold text-xl tracking-wider w-10 h-10 flex items-center justify-center shadow-md shadow-emerald-200">K</div>
+                <span class="text-2xl font-bold tracking-tight text-slate-900">Ka<span class="text-emerald-600">.</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                <a href="#" class="text-emerald-600 transition-colors">Home</a>
+                <a href="#" class="hover:text-slate-900 transition-colors">Explore Trade</a>
+                <a href="#" class="hover:text-slate-900 transition-colors">AI Matching</a>
+                <a href="#" class="hover:text-slate-900 transition-colors">Start Selling</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button class="hidden lg:flex items-center space-x-1 text-sm font-medium border border-slate-200 px-3 py-1.5 rounded-lg hover:bg-slate-50 transition">
+                    <span>🇬🇧 English</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
+                </button>
+                <button class="hidden lg:flex items-center space-x-1 text-sm font-medium border border-slate-200 px-3 py-1.5 rounded-lg hover:bg-slate-50 transition">
+                    <span>USD</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
+                </button>
+                <button class="bg-slate-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-800 transition flex items-center space-x-2 cursor-pointer shadow-xs">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Sign in with Google</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-b from-emerald-50/50 to-white pt-12 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                    <i class="fa-solid fa-bolt mr-1.5 text-amber-500 animate-pulse"></i> Smart Trading Solutions
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Discover & trade goods <br class="hidden sm:inline">with convenience —
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 font-medium">
+                    verified and powered by <span class="text-emerald-600 font-bold">Ka AI</span>.
+                </p>
+
+                <div class="bg-white p-3 rounded-2xl shadow-xl shadow-slate-200/80 border border-slate-100 max-w-2xl">
+                    <div class="flex flex-col md:flex-row md:items-center gap-3">
+                        <div class="flex-1 flex items-center px-3 space-x-3 border-b md:border-b-0 md:border-r border-slate-100 pb-3 md:pb-0">
+                            <i class="fa-solid fa-wand-magic-sparkles text-emerald-600 text-lg"></i>
+                            <input type="text" placeholder="Describe what you want to buy or trade (e.g., 5 tons of organic coffee)..." class="w-full text-sm text-slate-800 placeholder-slate-400 focus:outline-none bg-transparent">
+                        </div>
+                        <button class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition shadow-md shadow-emerald-100 flex items-center justify-center space-x-2 shrink-0 cursor-pointer">
+                            <span>AI Search</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pt-2 flex flex-wrap gap-2 items-center text-sm text-slate-500">
+                    <span class="font-medium text-slate-700">Popular trades:</span>
+                    <a href="#" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition text-xs">Agriculture</a>
+                    <a href="#" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition text-xs">Electronics</a>
+                    <a href="#" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition text-xs">Textiles</a>
+                    <a href="#" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition text-xs">Renewable Energy</a>
+                </div>
+
+                <div class="pt-8 grid grid-cols-3 gap-6 max-w-md border-t border-slate-100">
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900">500+ <span class="text-emerald-600">Commodities</span></p>
+                        <p class="text-xs text-slate-500 mt-1">Verified Supply Listings</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900">10k+ <span class="text-emerald-600">Traders</span></p>
+                        <p class="text-xs text-slate-500 mt-1">Active Global Profiles</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900">24/7 <span class="text-emerald-600">Escrow</span></p>
+                        <p class="text-xs text-slate-500 mt-1">Trade Protection Support</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative hidden lg:block">
+                <div class="absolute inset-0 bg-emerald-200 rounded-3xl transform rotate-3 scale-95 opacity-20 blur-xl"></div>
+                <div class="relative bg-slate-900 text-white rounded-3xl p-8 shadow-2xl border border-slate-800 overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl"></div>
+                    
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
+                            <span class="text-xs font-semibold tracking-wider uppercase text-slate-400">Live AI Trade Activity</span>
+                        </div>
+                        <i class="fa-solid fa-ellipsis text-slate-400"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-3 bg-slate-800/60 rounded-xl flex items-center justify-between border border-slate-800">
+                            <div>
+                                <p class="text-xs font-medium text-slate-400">Matched Order #9284</p>
+                                <p class="text-sm font-bold mt-0.5 text-white">Solar Panels 550W</p>
+                            </div>
+                            <span class="text-xs font-semibold px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded-md">Fulfilled</span>
+                        </div>
+                        <div class="p-3 bg-slate-800/60 rounded-xl flex items-center justify-between border border-slate-800">
+                            <div>
+                                <p class="text-xs font-medium text-slate-400">Escrow Secured</p>
+                                <p class="text-sm font-bold mt-0.5 text-white">12 Metric Tons Hass Avocado</p>
+                            </div>
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-500/10 text-blue-400 rounded-md">In Escrow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Trending Trade Sectors</h2>
+                <p class="text-slate-500 text-sm mt-1">Most high-volume trading sectors right now</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="group relative rounded-2xl overflow-hidden aspect-4/5 bg-slate-900 shadow-md">
+                    <div class="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/40 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">Agriculture</span>
+                        <h3 class="text-lg font-bold text-white group-hover:translate-x-1 transition-transform">Coffee & Grains</h3>
+                        <p class="text-xs text-slate-300 mt-1">42 active contracts</p>
+                    </div>
+                </a>
+                <a href="#" class="group relative rounded-2xl overflow-hidden aspect-4/5 bg-slate-900 shadow-md">
+                    <div class="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/40 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">Electronics</span>
+                        <h3 class="text-lg font-bold text-white group-hover:translate-x-1 transition-transform">Smart Components</h3>
+                        <p class="text-xs text-slate-300 mt-1">18 active contracts</p>
+                    </div>
+                </a>
+                <a href="#" class="group relative rounded-2xl overflow-hidden aspect-4/5 bg-slate-900 shadow-md">
+                    <div class="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/40 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">Renewables</span>
+                        <h3 class="text-lg font-bold text-white group-hover:translate-x-1 transition-transform">Lithium Cells</h3>
+                        <p class="text-xs text-slate-300 mt-1">11 active contracts</p>
+                    </div>
+                </a>
+                <a href="#" class="group relative rounded-2xl overflow-hidden aspect-4/5 bg-slate-900 shadow-md">
+                    <div class="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/40 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">Apparel</span>
+                        <h3 class="text-lg font-bold text-white group-hover:translate-x-1 transition-transform">Organic Cottons</h3>
+                        <p class="text-xs text-slate-300 mt-1">29 active contracts</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Featured Wholesale Listings</h2>
+                    <p class="text-slate-500 text-sm mt-1">Hand-picked commodities and items ready for purchase or barter contract</p>
+                </div>
+                <button class="bg-white border border-slate-200 text-slate-700 text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-50 transition shrink-0 cursor-pointer">
+                    View All Listings
+                </button>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-xs overflow-hidden group flex flex-col">
+                    <div class="relative bg-slate-100 aspect-video flex items-center justify-center p-4">
+                        <i class="fa-solid fa-seedling text-4xl text-emerald-600"></i>
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md">Verified Supplier</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-xs font-medium text-slate-400 mb-1">
+                                <span>Bulk Raw Materials</span>
+                                <span class="flex items-center text-amber-500"><i class="fa-solid fa-star mr-1"></i>4.9</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1">Premium Arabica Coffee Beans</h3>
+                            <p class="text-xs text-slate-500 mt-2 line-clamp-2">Sourced directly from certified farmer cooperatives in Mt. Elgon region. Moisture content < 12%.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium block">MOQ / Price</span>
+                                <span class="text-base font-bold text-slate-900">USD 4,200 <span class="text-xs font-normal text-slate-500">/ Ton</span></span>
+                            </div>
+                            <button class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition flex items-center justify-center cursor-pointer">
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-xs overflow-hidden group flex flex-col">
+                    <div class="relative bg-slate-100 aspect-video flex items-center justify-center p-4">
+                        <i class="fa-solid fa-solar-panel text-4xl text-blue-600"></i>
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md">Verified Supplier</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-xs font-medium text-slate-400 mb-1">
+                                <span>Electronics & Power</span>
+                                <span class="flex items-center text-amber-500"><i class="fa-solid fa-star mr-1"></i>4.7</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1">Monocrystalline Solar Panels 550W</h3>
+                            <p class="text-xs text-slate-500 mt-2 line-clamp-2">High efficiency PV panels with 25-year performance warranties. Tier 1 manufacturer.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium block">MOQ / Price</span>
+                                <span class="text-base font-bold text-slate-900">USD 65 <span class="text-xs font-normal text-slate-500">/ Unit</span></span>
+                            </div>
+                            <button class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition flex items-center justify-center cursor-pointer">
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-xs overflow-hidden group flex flex-col">
+                    <div class="relative bg-slate-100 aspect-video flex items-center justify-center p-4">
+                        <i class="fa-solid fa-shirt text-4xl text-amber-600"></i>
+                        <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md">Top Rated</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-xs font-medium text-slate-400 mb-1">
+                                <span>Apparel & Textiles</span>
+                                <span class="flex items-center text-amber-500"><i class="fa-solid fa-star mr-1"></i>5.0</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1">Organic Plain Cotton T-Shirts</h3>
+                            <p class="text-xs text-slate-500 mt-2 line-clamp-2">100% breathable organic cotton blank shirts. Customizable tag options for brands.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium block">MOQ / Price</span>
+                                <span class="text-base font-bold text-slate-900">USD 1.80 <span class="text-xs font-normal text-slate-500">/ Piece</span></span>
+                            </div>
+                            <button class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition flex items-center justify-center cursor-pointer">
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-xs overflow-hidden group flex flex-col">
+                    <div class="relative bg-slate-100 aspect-video flex items-center justify-center p-4">
+                        <i class="fa-solid fa-bottle-water text-4xl text-indigo-600"></i>
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md">Verified Supplier</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-xs font-medium text-slate-400 mb-1">
+                                <span>Packaging Supply</span>
+                                <span class="flex items-center text-amber-500"><i class="fa-solid fa-star mr-1"></i>4.6</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1">Biodegradable Delivery Boxes</h3>
+                            <p class="text-xs text-slate-500 mt-2 line-clamp-2">Recycled corrugated Kraft paper boxes for e-commerce packaging. Flat pack delivery.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium block">MOQ / Price</span>
+                                <span class="text-base font-bold text-slate-900">USD 0.22 <span class="text-xs font-normal text-slate-500">/ Unit</span></span>
+                            </div>
+                            <button class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition flex items-center justify-center cursor-pointer">
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Secure Payments & Escrow</h2>
+                <p class="text-slate-500 text-sm mt-2">Trade securely. Payment is held securely in Ka Escrow until verification of bill of lading or cargo inspection.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white text-lg font-bold mb-4">MTN</div>
+                        <h4 class="font-bold text-slate-900 text-base">MTN Mobile Money</h4>
+                        <p class="text-xs text-slate-500 mt-1">Instant, integrated domestic wallet payments with immediate confirmation tokens.</p>
+                    </div>
+                    <span class="text-xs font-medium text-slate-400 mt-4 block">No hidden escrow fees</span>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center text-white text-lg font-bold mb-4"><i class="fa-solid fa-a animate-pulse"></i></div>
+                        <h4 class="font-bold text-slate-900 text-base">Airtel Money</h4>
+                        <p class="text-xs text-slate-500 mt-1">Seamless regional mobile payment structures supported with automated 2FA protection.</p>
+                    </div>
+                    <span class="text-xs font-medium text-slate-400 mt-4 block">24/7 availability</span>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-lg font-bold mb-4"><i class="fa-solid fa-credit-card"></i></div>
+                        <h4 class="font-bold text-slate-900 text-base">Credit & Debit Cards</h4>
+                        <p class="text-xs text-slate-500 mt-1">Accepting international Visa, Mastercard, and American Express transactions safely.</p>
+                    </div>
+                    <span class="text-xs font-medium text-slate-400 mt-4 block">3D Secure Processing</span>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg font-bold mb-4"><i class="fa-solid fa-building-columns"></i></div>
+                        <h4 class="font-bold text-slate-900 text-base">Direct Bank Transfer</h4>
+                        <p class="text-xs text-slate-500 mt-1">Optimized for heavy wholesale transactions via SWIFT and local clearing networks.</p>
+                    </div>
+                    <span class="text-xs font-medium text-slate-400 mt-4 block">Zero platform hidden caps</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Why Choose Ka</h2>
+                <p class="text-slate-500 text-sm mt-1">Experience smooth, friction-free wholesale global trade</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base">Verified Traders</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Every business profile undergoes rigorous KYC and verification checks before listing inventory.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-handshake-lock"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base">Secure Smart Escrow</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Funds are strictly preserved securely inside automated smart hubs until confirmation of trade deliverables.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base">24/7 Expert Dispute Care</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Our multi-lingual trade legal support structure helps navigate compliance issues efficiently.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base">Best Competitive Tariffs</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Zero excessive intermediary margins. Direct factory-to-buyer negotiation tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div class="bg-gradient-to-r from-emerald-900 to-slate-950 rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-xl">
+            <div class="absolute right-0 top-0 bottom-0 w-1/3 bg-radial from-emerald-500/10 to-transparent hidden lg:block"></div>
+            <div class="max-w-xl space-y-6 relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to list your products for global trade?</h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Join thousands of verified manufacturing lines, suppliers, and traders expanding margins using smart workflows.</p>
+                <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                    <button class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-6 py-3.5 rounded-xl transition shadow-lg shadow-emerald-900/30 cursor-pointer">Become a Supplier</button>
+                    <button class="bg-white/10 hover:bg-white/15 border border-white/10 text-white font-semibold text-sm px-6 py-3.5 rounded-xl transition cursor-pointer">Talk to Trade Desk</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 text-sm pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+            
+            <div class="md:col-span-4 space-y-4">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="bg-emerald-600 text-white p-2 rounded-xl font-bold text-base tracking-wider w-8 h-8 flex items-center justify-center">K</div>
+                    <span class="text-xl font-bold tracking-tight">Ka<span class="text-emerald-500">.</span></span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                    Ka.trade is a premier digital environment trusted by institutional buyers and growing merchants alike for securing automated trading deals effortlessly.
+                </p>
+                <div class="flex items-center space-x-4 pt-2">
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 space-y-3">
+                <h4 class="text-white font-semibold text-xs tracking-wider uppercase">Explore</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-white transition">Trade Board</a></li>
+                    <li><a href="#" class="hover:text-white transition">Supplier Directory</a></li>
+                    <li><a href="#" class="hover:text-white transition">Escrow Services</a></li>
+                    <li><a href="#" class="hover:text-white transition">Custom Tariffs</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 space-y-3">
+                <h4 class="text-white font-semibold text-xs tracking-wider uppercase">Key Sectors</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-white transition">Agri-Products</a></li>
+                    <li><a href="#" class="hover:text-white transition">Heavy Equipment</a></li>
+                    <li><a href="#" class="hover:text-white transition">Consumer Finished</a></li>
+                    <li><a href="#" class="hover:text-white transition">Raw Textile Roll</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4 space-y-3">
+                <h4 class="text-white font-semibold text-xs tracking-wider uppercase">Stay Updated</h4>
+                <p class="text-xs text-slate-400">Receive strategic updates regarding global logistics changes and inventory opportunities.</p>
+                <form class="flex space-x-2 pt-2">
+                    <input type="email" placeholder="Your trading email" class="bg-slate-800 border border-slate-700 text-xs text-white rounded-xl px-3 py-2.5 flex-1 focus:outline-none focus:border-emerald-500">
+                    <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs px-4 py-2.5 rounded-xl transition cursor-pointer">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <p>&copy; 2026 Ka.trade • All rights reserved</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <a href="#" class="hover:text-white transition">Risk Disclosure</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
